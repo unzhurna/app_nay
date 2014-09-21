@@ -1,22 +1,13 @@
-<script src="<?php echo base_url(); ?>assets/js/plugins/jquery.responsivetables.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/plugins/jquery.datatables.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/plugins/jquery.datatables.extend.min.js"></script>
-<script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/dataTables.bootstrap.js"></script>
 
-        
-        $(document).ready(function() {
-				/* dataTable ajax Example
-				 * #table4
-				/*====================================================================*/
-				var static_number=0;
-				var oTable = $('#table').dataTable({
-					"bServerSide"  : true,	
-					"bProcessing": true,
-					"sAjaxSource": "<?php  if(isset($source)) echo $source ?>",
-					"aoColumnDefs": [{
-                "aTargets": [0]
-            }],
-		
+<script>
+	$(document).ready(function () {
+        var oTable = $('#dataTable').dataTable({
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "<?php  if(isset($source)) echo $source ?>",
+            "iDisplayStart ": 10,
             "oLanguage": {
                 "sLengthMenu": "_MENU_",
                 "sSearch": "",
@@ -24,11 +15,23 @@
                     "sPrevious": "",
                     "sNext": ""
                 }
+            },
+            "aoColumns": [
+				{ "bSortable": false,"sWidth":"1%"},
+				,
+				,
+				{"bSortable": false,"sWidth":"90", "sAlign":"center"}
+			],
+            'fnServerData': function (sSource, aoData, fnCallback) {
+                $.ajax
+                ({
+                    'dataType': 'json',
+                    'type': 'POST',
+                    'url': sSource,
+                    'data': aoData,
+                    'success': fnCallback
+                });
             }
-        
-	
-				});
-				
-			});
-    
-    </script>
+        });
+    });
+</script>
