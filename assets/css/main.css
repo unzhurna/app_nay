@@ -25,6 +25,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 48px;
+  background: url("../img/gplaypattern.png") repeat #444444;
 }
 .Footer,
 #footer {
@@ -532,10 +533,6 @@ body:not(.sidebar-left-mini) #menu .nav-header {
     float: left;
     width: 100%;
   }
-}
-
-.center{
-	text-align: center;
 }
 /* END CONTENT STYLES */
 /* ==========================================================================
@@ -2481,7 +2478,7 @@ body.error .logo h1 {
 }
 /* END ERROR PAGES STYLES */
 /* BEGIN LOGIN PAGE STYLES */
-.login {
+body.login {
   padding-top: 40px;
   padding-bottom: 40px;
   background: url("../img/gplaypattern.png") repeat #444444;

@@ -52,6 +52,9 @@
 					<li class="<?php if(isset($menu) && $menu=='dosen') echo "active"; ?>">
 						<?php echo anchor('dosen', '<i class="fa fa-user"></i><span class="link-title">&nbsp;Dosen</span>'); ?>
 					</li>
+					<li class="<?php if(isset($menu) && $menu=='user') echo "active"; ?>">
+						<?php echo anchor('dosen', '<i class="fa fa-user"></i><span class="link-title">&nbsp;User</span>'); ?>
+					</li>
 					<li><?php echo anchor('dosen', '<i class="fa fa-comments-o"></i><span class="link-title">&nbsp;Quisioner</span>'); ?></li>
 					<li>
 						<a href="javascript:;"> <i class="fa fa-exclamation-triangle"></i> <span class="link-title"> Error Pages </span> <span class="fa arrow"></span> </a>

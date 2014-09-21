@@ -1,8 +1,11 @@
 <div class="col-lg-12">
 	<div class="box">
-		<header><h5>Calendar</h5></header>
-		<div id="calendar_content" class="body">
-			<div id='calendar'></div>
+		<header>
+			<div class="icons"><i class="fa fa-home"></i></div>
+			<h5>Beranda</h5>
+		</header>
+		<div class="body">
+			<p> uduieqydiqeu</p>
 		</div>
 	</div>
 </div>
