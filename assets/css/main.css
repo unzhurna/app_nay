@@ -533,6 +533,10 @@ body:not(.sidebar-left-mini) #menu .nav-header {
     width: 100%;
   }
 }
+
+.center{
+	text-align: center;
+}
 /* END CONTENT STYLES */
 /* ==========================================================================
    Footer

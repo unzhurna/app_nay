@@ -16,12 +16,6 @@
                     "sNext": ""
                 }
             },
-            "aoColumns": [
-				{ "bSortable": false,"sWidth":"1%"},
-				,
-				,
-				{"bSortable": false,"sWidth":"90", "sAlign":"center"}
-			],
             'fnServerData': function (sSource, aoData, fnCallback) {
                 $.ajax
                 ({
