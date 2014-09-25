@@ -25,17 +25,7 @@
                     'data': aoData,
                     'success': fnCallback
                 });
-            },
-            "fnDrawCallback": function(oSettings){
-				var that = this;
-				/* Need to redo the counters if filtered or sorted */
-				if ( oSettings.bSorted || oSettings.bFiltered )
-				{
-					this.$('td:first-child', {"filter":"applied"}).each( function (i) {
-						that.fnUpdate( i+1, this.parentNode, 0, false, false );
-					});
-				}
-			}
+            }
         });
     });
 </script>

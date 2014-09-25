@@ -1,27 +1,27 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dosen_model extends CI_Model {
+class User_model extends CI_Model {
     	
   	function grid()
 	{
 		$this->load->database();
 		$this->load->library('datatables');
-		$this->datatables->select('A.id, A.ndn, A.nama, CONCAT(B.kode," ", B.jurusan)', FALSE)
-			->from('mt_dosen A')
+		$this->datatables->select('A.id, A.username, B.group, B.akses')
+			->from('mt_user A')
 			->unset_column('A.id')
-			->join('mt_jurusan B', 'A.id_jurusan = B.id', 'inner')
-			//->add_column('Name', $this->get_buttons('$1'), 'A.id')
+			->join('mt_group B', 'A.id_group = B.id', 'inner')
+			->add_column('No','sdsdsd')
 			->add_column('Actions', $this->get_buttons('$1'), 'A.id');
 		return $this->datatables->generate();
 	}
 	
 	function get_buttons($id)
 	{
-		$bnt = '<div class="btn-group">';
-		$bnt .= '<a href="'.base_url().'dosen/post/'.$id.'" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-edit"></i></a>';
-		$bnt .= '<a href="'.base_url().'dosen/delete/'.$id.'" onclick="return confirmModal(\'Anda akan menghapus?\',\''.base_url().'dosen/delete/'.$id.'\')" class="btn btn-xs btn-danger" title="Hapus"><i class="fa fa-trash-o"></i></a>';
-	    $bnt .= '</div>';
-	    return $bnt;
+		$html = '<div class="btn-group">';
+		$html .= '<a href="'.base_url().'dosen/post/'.$id.'" class="btn" title="Edit"><i class="fa fa-edit"></i></a>';
+		$html .= '<a href="'.base_url().'dosen/delete/'.$id.'" onclick="return confirmModal(\'Anda akan menghapus?\',\''.base_url().'dosen/delete/'.$id.'\')" class="btn" title="Hapus"><i class="fa fa-trash-o"></i></a>';
+	    $html .= '</div>';
+	    return $html;
 	}	
 	
 	function get_dosen($id)

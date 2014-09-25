@@ -1,5 +1,7 @@
-//Tool Tip
-$('[title]').tooltip();
+//Tool Top
+$(function(){
+	$('[title]').tooltip();
+});
 
 //Notification
 function notification(message) {

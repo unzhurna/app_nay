@@ -2,7 +2,7 @@
 	<div class="box">
 		<header>
 			<div class="icons"><i class="fa fa-table"></i></div>
-			<h5>Data Dosen</h5>
+			<h5>Quisioner</h5>
 			<div class="toolbar">
 				<?php echo anchor('dosen/post', '<i class="fa fa-plus-circle"></i> Tambah', 'class="btn btn-sm btn-default"'); ?>
 			</div>
@@ -14,7 +14,7 @@
 						<th>NDN</th>
 						<th>Nama</th>
 						<th>Jurusan</th>
-						<th width="10%">Aksi</th>					
+						<th width="15%">Aksi</th>					
 					</tr>
 				</thead>
 				<tbody>

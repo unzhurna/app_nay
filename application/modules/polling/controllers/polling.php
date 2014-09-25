@@ -1,17 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dosen extends CI_Controller {
+class Polling extends CI_Controller {
 
 	function __construct()
 	{
 		parent:: __construct();
-		$this->load->model('dosen_model');
+		$this->load->model('polling_model');
 	}	
 	
 	function index()
 	{
-		$item['source']= base_url().'dosen/grid';
-		$data['menu']='dosen';
+		$item['source']= base_url().'polling/grid';
+		$data['menu']='polling';
 		$data['content']= $this->load->view('datagrid', $item, TRUE);
 		$data['script']= $this->load->view('script', '', TRUE);
 		$this->load->view('template',$data);
@@ -24,7 +24,7 @@ class Dosen extends CI_Controller {
 			show_404();
 			exit;
 		}
-		echo $this->dosen_model->grid();
+		echo $this->polling_model->grid();
 	}
 	
 	function post($id = FALSE)

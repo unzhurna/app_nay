@@ -53,20 +53,19 @@
 						<?php echo anchor('dosen', '<i class="fa fa-user"></i><span class="link-title">&nbsp;Dosen</span>'); ?>
 					</li>
 					<li class="<?php if(isset($menu) && $menu=='user') echo "active"; ?>">
-						<?php echo anchor('dosen', '<i class="fa fa-user"></i><span class="link-title">&nbsp;User</span>'); ?>
+						<?php echo anchor('user', '<i class="fa fa-users"></i><span class="link-title">&nbsp;User</span>'); ?>
 					</li>
-					<li><?php echo anchor('dosen', '<i class="fa fa-comments-o"></i><span class="link-title">&nbsp;Quisioner</span>'); ?></li>
+					<li class="<?php if(isset($menu) && $menu=='polling') echo "active"; ?>">
+						<?php echo anchor('polling', '<i class="fa fa-comments-o"></i><span class="link-title">&nbsp;Quisioner</span>'); ?>
+					</li>
 					<li>
-						<a href="javascript:;"> <i class="fa fa-exclamation-triangle"></i> <span class="link-title"> Error Pages </span> <span class="fa arrow"></span> </a>
+						<a href="javascript:;"> <i class="fa fa-users"></i><span class="link-title">&nbsp;Manajemen User</span><span class="fa arrow"></span></a>
 						<ul>
 							<li>
-								<a href="503.html"> <i class="fa fa-angle-right"></i>&nbsp;503</a>
+								<?php echo anchor('user/group', '<i class="fa fa-angle-right"></i>&nbsp;User Grup'); ?>
 							</li>
 							<li>
-								<a href="offline.html"> <i class="fa fa-angle-right"></i>&nbsp;offline</a>
-							</li>
-							<li>
-								<a href="countdown.html"> <i class="fa fa-angle-right"></i>&nbsp;Under Construction</a>
+								<?php echo anchor('user', '<i class="fa fa-angle-right"></i>&nbsp;Data User'); ?>
 							</li>
 						</ul>
 					</li>					
@@ -88,9 +87,9 @@
 		<script src="<?php echo base_url(); ?>assets/js/jquery-ui.min.js"></script>
 		<script src="<?php echo base_url(); ?>assets/js/iosOverlay.js"></script>
   		<script src="<?php echo base_url(); ?>assets/js/spin.min.js"></script>
-		<script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
+		<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 		<script src="<?php echo base_url(); ?>assets/js/screenfull.js"></script>
-		<script src="<?php echo base_url(); ?>assets/js/core.js"></script>
+		<script src="<?php echo base_url(); ?>assets/js/core.min.js"></script>
 		<script src="<?php echo base_url(); ?>assets/js/app.js"></script>
 		<script>
 			jQuery(document).ready(function() {
